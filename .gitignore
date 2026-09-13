@@ -1,0 +1,7 @@
+# This has been enough to cover anything i've ran into so far.
+# Hopefully I remember to update it as I go.
+
+.coverage
+*.pyc
+*__pycache__
+*.egg*
