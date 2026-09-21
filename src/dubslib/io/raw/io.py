@@ -1,6 +1,6 @@
-from exceptions.serializationerror import *
+from dubslib.io.data.exceptions import UnsupportedFormatError
 
-def raw_from_file(file_path: str, format: str):
+def from_file(file_path: str, format: str):
     """
     Provides the data within a file, dependent on the provided format. 
     Defaults to utf-8 encoding.
@@ -22,14 +22,14 @@ def raw_from_file(file_path: str, format: str):
     """
 
     with open(file_path, mode="r", encoding="utf-8") as rawtext:
-        if format == "Yield":
+        if format == "yield":
             yield from rawtext
         elif format =="list":
             return list(rawtext)
         elif format == "string":
             return rawtext.read()
         else:
-            raise UnsupportedFormatError(format, ("Yield", "list", "string"))
+            raise UnsupportedFormatError(format, ("yield", "list", "string"))
 
 def write_to_file(file_path: str, content: str | list[str]):
     """
