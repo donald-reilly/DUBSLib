@@ -77,11 +77,20 @@ def write_to_file(file_path: str| Path,
         file_path(str): Path to the file to overwrite, create or append to.
         content(str): String or list of strings to write to file.
         write_mode(str): How to write the file. 
-            Accepted: "Write", "Appened", "write", "appened", 'w', 'a' 
+            Accepted: "Write", "Appened", "write", "appened", 'w', 'a', 'W', 'A'
 
     Raises:    
-        UnsupportedFormatError(format; AcceptedFormats)
+        UnsupportedFormatError(format, AcceptedFormats)
     """
+
+    if not isinstance(content, str, list):
+        raise TypeError(f"Content is of type: {type(content)}. Must be of type str or list")
+    supported_modes = (
+        "Write", "Appened",
+        "write", "appened",
+        'W', 'A',
+        'w', 'a'
+    )
     to_file = {
         "w": {
             str: _write_string_to_file,
@@ -92,6 +101,9 @@ def write_to_file(file_path: str| Path,
             list: _append_lines_to_file
         }
     }
-    mode = write_mode[0].lower()
-    if mode in to_file:
+
+    if write_mode in supported_modes:
+        mode = write_mode[0].lower()
         to_file[mode][type(content)](file_path, content)
+    else:
+        raise UnsupportedFormatError(write_mode, supported_modes)
