@@ -28,7 +28,9 @@ This is published to PyPI and can be installed with pip install dubslib
 
 ## Usage
 
-This will be updated as the package develops.
+Usage examples will be updated periodically in [examples](./examples/).
+
+- [IO](./examples/ioexamples.py)
 
 
 ---
