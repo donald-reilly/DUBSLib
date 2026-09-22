@@ -1,5 +1,6 @@
 from pathlib import Path
 from dubslib.io.exceptions import UnsupportedReadModeError
+
 def _yield_from_file(file_path: str):
     """
     Yeild lines from the provided file. Defaults to utf-8 encoding.
