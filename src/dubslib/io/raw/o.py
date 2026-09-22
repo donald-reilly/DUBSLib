@@ -1,4 +1,4 @@
-from dubslib.io import UnsupportedFormatError
+from dubslib.io.exceptions import UnsupportedFormatError
 from pathlib import Path
 
 def _write_string_to_file(file_path: str, content: str):

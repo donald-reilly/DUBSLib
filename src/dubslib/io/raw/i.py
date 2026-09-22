@@ -1,5 +1,5 @@
 from pathlib import Path
-
+from dubslib.io.exceptions import UnsupportedReadModeError
 def _yield_from_file(file_path: str):
     """
     Yeild lines from the provided file. Defaults to utf-8 encoding.
@@ -54,13 +54,20 @@ def read_from_file(file_path: str | Path, read_mode: str):
     Raises:    
         UnsupportedFormatError(format; AcceptedFormats)
     """
-
+    supported_modes = (
+        "String", "List", "Yield",
+        "string", "list", "yield",
+        'S', 'L', 'Y',
+        's', 'l', 'y'
+    )
     from_file = {
         "s": _string_from_file,
         "l": _list_from_file,
         "y": _yield_from_file
     }
 
-    read_mode = read_mode[0].lower()
-    if read_mode in from_file:
-        from_file[read_mode](file_path)
+    if read_mode in supported_modes:
+        rm = read_mode[0].lower()
+        return from_file[rm](file_path)
+    else:
+        raise UnsupportedReadModeError(read_mode, supported_modes)
