@@ -53,4 +53,4 @@ maintaining this package on any open source sites. I plan on keeping the major u
 
 ## License
 
-State your license (e.g., MIT) and link to the LICENSE file.
+[GNU GENERAL PUBLIC LICENSE Version 3](./LICENSE)
