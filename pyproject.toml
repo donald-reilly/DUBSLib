@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "DUBSlib"
 version = "0.1.0"
-description = "A collection of functions and constant variables."
+description = "My collection of useful classes, functions, and constants."
 
 readme = "README.md"
 
