@@ -1,6 +1,6 @@
 import json
 from pathlib import Path
-from .exceptions import UnsupportedFormatError
+from dubslib.io.exceptions import UnsupportedFormatError
 
 # WORK [ ]: Module doc string.
 class Persistence:
