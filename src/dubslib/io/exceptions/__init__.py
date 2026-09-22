@@ -1,3 +1,3 @@
-from .serializationerror import UnsupportedFormatError
+from .serializationerror import UnsupportedFormatError, UnsupportedReadModeError
 
-__all__ = ["UnsupportedFormatError"]
+__all__ = ["UnsupportedFormatError", "UnsupportedReadModeError"]
