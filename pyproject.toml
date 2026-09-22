@@ -12,19 +12,12 @@ readme = "README.md"
 authors = [
     { name = "Donald Raymond Reilly Jr.", email = "donald.reilly.jr@outlook.com" }
 ]
-<<<<<<< HEAD
 
 license = "GPL-3.0-or-later"
 license-files = ["LICEN[CS]E*"]
 
 [project.urls]
 Repository = "https://github.com/donald-reilly/DUBSLib"
-=======
-license = "GPL-3.0-or-later"
-license-files = ["LICEN[CS]E*"]
-[project.urls]
-Repository = "https://github.com/donald-reilly/DUBSLib
->>>>>>> d1f21e56d1a0ee2efc0555a1da53fbe5c0dd45b8
 
 [tool.setuptools.packages.find]
 where = ["src"]
