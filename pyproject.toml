@@ -12,5 +12,12 @@ readme = "README.md"
 authors = [
     { name = "Donald Raymond Reilly Jr.", email = "donald.reilly.jr@outlook.com" }
 ]
+
+license = "GPL-3.0-or-later"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Repository = "https://github.com/donald-reilly/DUBSLib"
+
 [tool.setuptools.packages.find]
 where = ["src"]
