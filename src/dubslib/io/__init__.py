@@ -1,10 +1,10 @@
-from .data.io import Persistence, UnsupportedFormatError
-from .raw.io import append_to_file, write_to_file, from_file
+from .data.io import Persistence
+from .raw import write_to_file, read_from_file
+from .exceptions import UnsupportedFormatError
 
 __all__ = [
-    "append_to_file",
     "write_to_file",
-    "from_file",
+    "read_from_file",
     "Persistence",
     "UnsupportedFormatError"
     ]

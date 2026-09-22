@@ -1,6 +1,5 @@
-from .io import Persistence, UnsupportedFormatError
+from .io import Persistence
 
 __all__ = [
-           Persistence,
-           UnsupportedFormatError
+           Persistence
            ]

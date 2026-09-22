@@ -1,13 +1,7 @@
-from .io import (
-                    from_file,
-                    write_to_file,
-                    append_to_file,
-                    UnsupportedFormatError
-                    )
+from .o import write_to_file
+from .i import read_from_file
 
 __all__ = [
-    "from_file",
-    "write_to_file",
-    "append_to_file",
-    "UnsupportedFormatError"
+    "read_from_file",
+    "write_to_file"
     ]
