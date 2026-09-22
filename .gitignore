@@ -7,5 +7,5 @@
 *.egg*
 */Untested*
 */.vscode
-
+/dist
 .vscode
