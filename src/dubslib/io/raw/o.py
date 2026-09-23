@@ -83,7 +83,7 @@ def write_to_file(file_path: str| Path,
         UnsupportedFormatError(format, AcceptedFormats)
     """
 
-    if not isinstance(content, str, list):
+    if not isinstance(content, (str, list)):
         raise TypeError(f"Content is of type: {type(content)}. Must be of type str or list")
     supported_modes = (
         "Write", "Appened",
